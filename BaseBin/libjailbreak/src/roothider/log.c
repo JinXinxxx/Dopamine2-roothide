@@ -46,7 +46,7 @@ char* JBLogGetLogFilePath(const char* logname, char* buffer)
     struct timeval t={0};
     gettimeofday(&t, NULL);
 
-    snprintf(buffer, PATH_MAX, "%s/%s-%lu.%d-%d.log", LOGGING_DIR, logname, t.tv_sec, t.tv_usec, getpid());
+    snprintf(buffer, PATH_MAX, "%s/%s-%lu.%d-%djinxxx.log", LOGGING_DIR, logname, t.tv_sec, t.tv_usec, getpid());
 
     return buffer;
 }
